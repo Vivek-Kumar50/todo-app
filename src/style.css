@@ -1,0 +1,389 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+    color: #222222;
+    transition: 0.3s;
+}
+
+.container {
+    width: 450px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.subtitle {
+    margin-top: 5px;
+    color: gray;
+    font-size: 14px;
+}
+
+.theme-button {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+
+/* Inputs */
+
+input {
+    padding: 10px;
+    width: 210px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+#dueDateInput {
+    margin: 5px;
+}
+
+#searchInput {
+    width: 90%;
+    margin-top: 15px;
+}
+
+#sortInput {
+    margin-top: 10px;
+    width: 90%;
+}
+
+#categoryFilter {
+    margin-top: 10px;
+    width: 90%;
+}
+
+#favoriteFilter {
+    margin-top: 10px;
+    width: 90%;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.add-button {
+    font-weight: bold;
+}
+
+.management-buttons {
+    margin-top: 5px;
+}
+
+.clear-button,
+.clear-completed-button {
+    margin-top: 5px;
+}
+
+.reset-button {
+    margin-top: 8px;
+}
+
+
+/* Filters */
+
+.filters {
+    margin-top: 15px;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.dashboard-card {
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.dashboard-card h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-card p {
+    margin: 5px 0 0;
+}
+
+
+/* Progress */
+
+.progress-section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+
+/* Backup */
+
+.backup-section {
+    margin-top: 15px;
+}
+
+
+/* Task list */
+
+ul {
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.task-text {
+    margin-left: 8px;
+}
+
+.task-buttons {
+    float: right;
+}
+
+.task-buttons button {
+    padding: 5px 10px;
+    margin: 0 0 0 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+/* Favorite */
+
+.favorite-button {
+    padding: 5px 8px;
+    font-size: 18px;
+    margin: 0 0 0 5px;
+}
+
+
+/* Priority */
+
+.priority {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.high {
+    background-color: #ffcccc;
+}
+
+.medium {
+    background-color: #fff0b3;
+}
+
+.low {
+    background-color: #ccffcc;
+}
+
+
+/* Category */
+
+.category {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background-color: #dbeafe;
+    font-size: 12px;
+}
+
+
+/* Due Date */
+
+.due-date {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.overdue {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Dark Mode */
+
+body.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
+body.dark-mode .container {
+    background-color: #252525;
+}
+
+body.dark-mode .subtitle {
+    color: #bbbbbb;
+}
+
+body.dark-mode .dashboard-card {
+    background-color: #333333;
+}
+
+body.dark-mode li {
+    background-color: #333333;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #555555;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #333333;
+    color: white;
+    border-color: #666666;
+}
+
+body.dark-mode button {
+    background-color: #444444;
+    color: white;
+}
+
+body.dark-mode input::placeholder {
+    color: #bbbbbb;
+}
+
+body.dark-mode .category {
+    background-color: #444444;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 85%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    select {
+        width: 95%;
+    }
+
+    #dueDateInput {
+        width: 95%;
+    }
+
+    #sortInput {
+        width: 95%;
+    }
+
+    #categoryFilter {
+        width: 95%;
+    }
+
+    #favoriteFilter {
+        width: 95%;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        float: none;
+        display: block;
+        margin-top: 8px;
+    }
+
+    .management-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backup-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

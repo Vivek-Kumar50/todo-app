@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div>
+
+            <h1>My To-Do List</h1>
+
+            <p class="subtitle">
+                Organize your tasks and stay productive
+            </p>
+
+        </div>
+
+        <button
+                id="themeButton"
+                class="theme-button"
+                onclick="toggleTheme()"
+        >
+            🌙
+        </button>
+
+    </div>
+
+
+    <p id="taskCount">
+        Total Tasks: 0 | Completed: 0
+    </p>
+
+
+    <!-- Dashboard -->
+
+    <div class="dashboard">
+
+        <div class="dashboard-card">
+
+            <h3 id="totalNumber">0</h3>
+            <p>Total</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3 id="completedNumber">0</h3>
+            <p>Completed</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3 id="pendingNumber">0</h3>
+            <p>Pending</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3 id="overdueNumber">0</h3>
+            <p>Overdue</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Progress -->
+
+    <div class="progress-section">
+
+        <div class="progress-header">
+
+            <span>Progress</span>
+
+            <span id="progressText">
+                0%
+            </span>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div
+                    id="progressFill"
+                    class="progress-fill"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Add Task -->
+
+    <div class="task-input-area">
+
+        <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task"
+        >
+
+
+        <select id="priorityInput">
+
+            <option value="High">
+                High
+            </option>
+
+            <option value="Medium" selected>
+                Medium
+            </option>
+
+            <option value="Low">
+                Low
+            </option>
+
+        </select>
+
+
+        <select id="categoryInput">
+
+            <option value="College">
+                College
+            </option>
+
+            <option value="DSA">
+                DSA
+            </option>
+
+            <option value="Project">
+                Project
+            </option>
+
+            <option value="Personal">
+                Personal
+            </option>
+
+        </select>
+
+
+        <input
+                type="date"
+                id="dueDateInput"
+        >
+
+
+        <button
+                class="add-button"
+                onclick="addTask()"
+        >
+            + Add Task
+        </button>
+
+    </div>
+
+
+    <!-- Management Buttons -->
+
+    <div class="management-buttons">
+
+        <button
+                class="clear-button"
+                onclick="clearAll()"
+        >
+            Clear All
+        </button>
+
+        <button
+                class="clear-completed-button"
+                onclick="clearCompleted()"
+        >
+            Clear Completed
+        </button>
+
+    </div>
+
+
+    <!-- Search -->
+
+    <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 Search task..."
+            onkeyup="searchTasks()"
+    >
+
+
+    <!-- Status Filters -->
+
+    <div class="filters">
+
+        <button onclick="showAll()">
+            All
+        </button>
+
+        <button onclick="showActive()">
+            Active
+        </button>
+
+        <button onclick="showCompleted()">
+            Completed
+        </button>
+
+    </div>
+
+
+    <!-- Category Filter -->
+
+    <select
+            id="categoryFilter"
+            onchange="filterByCategory()"
+    >
+
+        <option value="All">
+            All Categories
+        </option>
+
+        <option value="College">
+            College
+        </option>
+
+        <option value="DSA">
+            DSA
+        </option>
+
+        <option value="Project">
+            Project
+        </option>
+
+        <option value="Personal">
+            Personal
+        </option>
+
+    </select>
+
+
+    <!-- Favorite Filter -->
+
+    <select
+            id="favoriteFilter"
+            onchange="filterByFavorite()"
+    >
+
+        <option value="All">
+            All Tasks
+        </option>
+
+        <option value="Favorite">
+            ⭐ Favorites Only
+        </option>
+
+    </select>
+
+
+    <!-- Sort -->
+
+    <select
+            id="sortInput"
+            onchange="sortTasks()"
+    >
+
+        <option value="default">
+            Default Order
+        </option>
+
+        <option value="priority">
+            Priority: High → Low
+        </option>
+
+        <option value="date">
+            Due Date: Earliest → Latest
+        </option>
+
+    </select>
+
+
+    <!-- Reset -->
+
+    <button
+            class="reset-button"
+            onclick="resetFilters()"
+    >
+        Reset Filters
+    </button>
+
+
+    <!-- Backup -->
+
+    <div class="backup-section">
+
+        <button
+                class="export-button"
+                onclick="exportTasks()"
+        >
+            📥 Export Tasks
+        </button>
+
+
+        <button
+                class="import-button"
+                onclick="document.getElementById('importFile').click()"
+        >
+            📤 Import Tasks
+        </button>
+
+
+        <input
+                type="file"
+                id="importFile"
+                accept=".json"
+                onchange="importTasks(event)"
+                style="display: none;"
+        >
+
+    </div>
+
+
+    <ul id="taskList"></ul>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
