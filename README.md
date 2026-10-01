@@ -43,10 +43,11 @@ A simple and responsive To-Do List web application built using HTML, CSS, and Ja
 ```text
 MyFirstApp
 │
+├── index.html
+├── style.css
+├── script.js
+│
 ├── src
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
 │   └── Main.java
 │
 ├── .gitignore
