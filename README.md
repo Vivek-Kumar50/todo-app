@@ -1,5 +1,8 @@
 # 📝 My To-Do List
 🌐 **Live Demo:** [Open My To-Do App](https://vivek-kumar50.github.io/todo-app/)
+## 📸 App Preview
+
+![My To-Do App Screenshot](todo-app-preview.png)
 A simple and responsive To-Do List web application built using HTML, CSS, and JavaScript.
 
 ## 🚀 Features
